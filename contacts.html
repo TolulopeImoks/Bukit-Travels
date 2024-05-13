@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="icon" href="./image/logo2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/flight.css">
+    <link rel="stylesheet" href="./CSS/contacts.css">
+    <link rel="stylesheet" href="./CSS/contact-map.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+</head>
+
+<body>
+    <div class="main-nav">
+        <div class="container-fluid ">
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid mt-2">
+                    <a class="navbar-brand" href="#"><img src="./image/logo2.png" alt="logo"
+                            style="width:70px; height: 70px;"><p>BUKIT Travels</p></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link ms-0" aria-current="page" href="flight.html">FLIGHTS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link ms-0 active" aria-current="page" href="contacts.html">CONTACTS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link ms-0" href="bookings.html">BOOKINGS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link ms-0" aria-current="page" href="hotels.html">HOTELS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link ms-0" href="faq.html">FAQ</a>
+                            </li>
+
+                        </ul>
+
+
+                        <p class="login-signup"><a href="login.html" class="">LOGIN</a> / <a href="register.html" class="">SIGNUP</a>
+                        </p>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <br>
+
+    </div>
+
+
+    <div class="main">
+        <div class="contact-img">
+            <img src="./image/Lekki2.png" alt="image">
+        </div>
+
+        <br>
+        <h2 class="contact-info">CONTACT INFORMATION</h2>
+        <h1 class="bukit-info">BUKIT Flight and Tours </h1>
+        <p class="p-bukit">
+            BUKIT flight and Tours gives the best and reliable source of experiencing what goes on in the air and
+            gives you better experience on every country you might wanna be in this world.
+            BUKIT stands Africa's premier Tour Operator, Travel Arranger, and comprehensive online travel booking
+            company. At Bukit, we understand that Nigerians love to book cheap flights & other travel services, so
+            we
+            provide our customers with a one-stop booking portal for cheap airline tickets, Hotels, Visa Assistance,
+            Holiday Packages, Airport Transfers, a Loyalty program, and many more. Our portal gives customers the
+            power
+            of choice from a broad selection of top travel deals, and the ability to search, compare and book
+            flights
+            from domestic and international Airlines like Arik Air, Air Peace, & Saudi Airlines, from the comfort of
+            their homes and everywhere they are. Some of our more popular destinations include flights from Lagos to
+            London, Lagos to Abuja & Lagos to Port Harcourt flights. We also have an interactive Call Centre and
+            physical travel centers numbering 32 and counting across Nigeria, with a dedicated travel center
+            strategically located at international airports for customers’ convenience. We have offices in Ghana,
+            Dubai,
+            and Sierra Leone with aggressive plans to expand into several African countries and the rest of the
+            world.
+            Our strategic relationships with Travel Partners ensure we offer the best travel deals to our customers,
+            every time. Book last-minute flight & hotel deals now.
+        </p>
+
+        <p class="p-bukit">
+            BukitNow is an organization thats provides good services to people in exchange for their interest to
+            fly with us as well as their interest in trusting us by taking them round the global .
+        </p>
+    </div>
+
+    <div class="main2">
+    <div class="form-container">
+        <h2 class="h2-form">LEAVE A MESSAGE</h2>
+        
+            <form class="contact-feedback-form" id="contact-form" onsubmit="validateContact(event)">
+                <input type="text" class="contact-name" name="contact-name" id="contactName" placeholder="Your name">
+                <span id="contactNameError" class="error"></span>
+
+                <input type="email" class="contact-email" name="contact-email" id="contactEmail" placeholder="Enter Your Email">
+                <span id="contactEmailError" class="error"></span>
+               
+                <input type="datetime-local" name="datetime" id="dateTime" class="contact-datetime" placeholder="Choose Date and Time"> <span id="dateTimeError" class="error"></span>
+
+                <textarea name="message" id="contactMessage" class="contact-textarea" placeholder="Your Message"></textarea>
+                <span id="contactMessageError" class="error"></span>
+                
+                <input type="submit" class="contact-submit" value="SUBMIT YOUR MESSAGE">
+            </form>
+
+        
+    </div>
+    <br>
+    <div class="address">
+        <p class="p-address">BUKIT Travels and Tours</p>
+        <p><i class="fa-solid fa-address-card" style="padding:0 5px;"></i>60, Ayangbure Road, Beside Ayangbure Palace
+            Above Domino Store, Ikorodu. Lagos, Ikorodu, Lagos
+
+            Directions
+        </p>
+        <p><i class="fa-solid fa-phone" style="padding:0 5px;"></i>+234 700000000</p>
+        <a href="mailto:info@bukit.org"><p><i class="fa-solid fa-envelope" style="padding:0 5px;"></i>info@bukit.org</p></a>
+    </div>
+    
+    <div class="google-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.239998069392!2d3.499948073730432!3d6.617077722071434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bef4f5b6ef787%3A0x4c443fd78543a9f9!2sNIIT%20Ikorodu!5e0!3m2!1sen!2sng!4v1711986705350!5m2!1sen!2sng" alt="map-for-direction"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    
+    <br>
+    <br>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <div class="footer-logo-container">
+                <h6>BUKIT TRAVELS AND TOURS </h6>
+                <a href="./flight.html"><img src="./image/logo2.png" alt="logo" style="height:200px; width:200px;"></a>
+                <p style="width:240px;">BUKIT Travels and Tours provides good services to people in exchange for
+                    their interest to
+                    fly with us</p>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h2>About Us</h2>
+            <p>We bring to the Trouvaille of Nigeria a venue to book cheap flights when one makes a flight booking
+                online. Our online flight booking domain caters to the needs of booking flights and traces down the
+                cheapest flights in the market to international destinations. We have everything from cheap flight
+                tickets to budget-friendly airplane tickets. Flight booking to destinations across the world had
+                never been this easier.</p>
+            <br>
+            <p>
+                So, make the most of your vacation with Bukit and experience the extraordinary with online flight
+                booking now.
+            </p>
+        </div>
+
+
+        <div class="footer-section">
+            <h2>BUKIT TOURS AND FLIGHT</h2>
+            <p>To ask question or make enquries <a style="text-decoration: underline; color: wheat"
+                    href="mailto:info@bukit.org">CLICK HERE</a>To send mail.</p>
+
+
+
+            <form class="feedback-form" id="myForm" onsubmit="validateForm(event)">
+                <input type="text" class="feedback_name" name="feedback_name" id="feedback_name"
+                    placeholder="Your name">
+                <span id="nameError" class="error"></span>
+
+                <input type="email" class="feedback_email" name="feedback_email" id="feedback_email"
+                    placeholder="Enter Your Email">
+                <span id="feedbackEmailError" class="error"></span>
+
+                <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                <span id="messageError" class="error"></span>
+                <input type="submit" class="feedback_submit" value="SEND FEEDBACK">
+            </form>
+
+
+        </div>
+    </div>
+    <p class="base">BUKITNOW TOURS AND FLIGHT....&copy;2024</p>
+    <div>
+        <a href="#top" class="back"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+</footer>
+
+        <script src="./JS/contact.js"></script>
+        <script src="./JS/footer-feedback.js"></script>
+</body>
+
+</html>

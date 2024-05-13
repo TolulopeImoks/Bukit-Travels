@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(114, 165, 197);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    margin-top: 30px;
+    background: rgba (39, 39, 39, 0.4);
+}
+
+.login-r {
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#registerBtn {
+    margin-left: 15px;
+}
+
+.btn.w-btn {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.btn.w-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba (39, 39, 39, 0.4);
+}
+
+.register-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.top {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+a {color: navy;
+    cursor: pointer;
+}
+
+.top p {
+    color: black;
+font-size: small;
+    padding: px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.top a {
+    font-size: small;
+    cursor: pointer;
+    font-weight: 500;
+    color: navy;
+    margin-left: 5px;
+    text-align: center;
+}
+
+a:hover {
+    cursor: pointer;
+    color: red;  
+}
+
+header {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
+.two-forms {
+    width: 100%;
+    display: flex;justify-content: space-between;
+   
+}
+
+.input-field {
+    font-size: 15px;
+    background: white;
+    color: black;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 15px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+
+#firstName, #lastName{width:98%;
+    padding: 0 30px;
+}
+
+
+/* .input-field:hover, .input-field:focus{
+    background: rgba(255, 255, 255, 0.25);
+} */
+
+::-webkit-input-placeholder {
+    color: black;
+}
+
+.input-box i {
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+
+.submit {
+    font-size: 15px;
+    font-weight: 500px;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.submit:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-sizing: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.two-col .one {
+    display: flex;
+    gap: 5px;
+}
+
+.two label a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 786px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav-menu.responsive {
+        top: 100px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .nav-menu-btn i {
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .nav-menu-btn i:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    
+}
+
+@media only screen and (max-width: 540px) {
+    .container {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .form-box {
+        width: 100%;
+        height: 500px;
+    }
+
+    .register-container,
+    .login-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .register-container .two-forms {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #lastName{margin-left: 0;}
+
+}

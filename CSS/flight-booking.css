@@ -1,0 +1,151 @@
+.book-me-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(114, 165, 197);
+
+}
+
+.bookings {
+    padding-top: 20px;
+    width: 10%;
+}
+
+.book-flight {
+    background-color: white;
+    width: 10%;
+    padding: 10px 0;
+    height: auto;
+}
+
+.find-hotels {
+    width: 10%;
+    height: auto;
+}
+
+.book-me {
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    align-items: ;
+    justify-content: center;
+    background-color: rgba(204, 211, 214, 0.473);
+    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.book-me h4 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px rgba(0, 0. 0, 0.2);
+}
+
+.custom-select{display: flex;
+flex-direction: column;
+justify-content: start;}
+
+.error{margin: 0 0px;}
+
+.select {
+    width: 190px;
+    padding: 5px;
+    background-color: rgb(237, 234, 234);
+    font-size: 12px;
+}
+
+.booking-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.date {
+    width: 150px;
+    padding: 15px;
+}
+
+.flight-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.radio-container{display: flex;}
+
+.radio{
+    padding-left: 40px;
+    font-weight: bolder;
+}
+
+.error{margin: 0 20px;}
+
+.order-button {
+    background-color: rgb(18, 18, 123);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    margin: 20px 40px;
+    padding: 5px;
+}
+
+.order-button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+@media screen and (max-width: 600px) {
+    .book-me {
+        width: 100%;
+    }
+
+    .select {
+        width: 100%;
+        padding: 1 0px 40px;
+    }
+
+    .booking-form {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .flight-type{display: flex;
+    flex-direction: column;
+}
+
+.radio-container{display: flex;
+flex-direction: column;}
+
+}

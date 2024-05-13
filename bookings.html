@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <link rel="icon" href="./image/logo2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./flight.css">
+    <link rel="stylesheet" href="./CSS/flight-booking.css">
+    <link rel="stylesheet" href="./CSS/bookings.css">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+
+</head>
+
+<body>
+    <div class="main-nav">
+        <div class="container-fluid ">
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid mt-2">
+                    <a class="navbar-brand" href="#"><img src="./image/logo2.png" alt="logo"
+                            style="width:70px; height: 70px;">
+                        <p>BUKIT Travels</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link  ms-0" aria-current="page" href="flight.html">FLIGHTS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link ms-0" aria-current="page" href="contacts.html">CONTACTS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link ms-0 active" href="bookings.html">BOOKINGS</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link ms-0" aria-current="page" href="hotels.html">HOTELS</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link ms-0" href="faq.html">FAQ</a>
+                            </li>
+
+                        </ul>
+
+
+                        <p class="login-signup"><a href="login.html" class="">LOGIN</a> / <a href="register.html"
+                                class="">SIGNUP</a>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <br>
+
+    </div>
+
+    <br>
+
+
+
+    <br>
+    <br>
+    <br>
+
+    <div class="book-me-container">
+        <div class="book-me">
+
+            <h2>Check availability for direction</h2>
+            <hr>
+
+            <form class="form" id="bookingForm" onsubmit="validateBookings(event)">
+                <div class="booking-form">
+                    <div class="departure">
+                        <div class="input-field">
+                            <label>FROM:</label>
+                            <div class="custom-select">
+                                <select class="select" id="fromLocation">
+                                    <option value="" class="">select your location</option>
+                                    <option value="Abuja">Abuja</option>
+                                    <option value="Lagos">Lagos</option>
+                                    <option value="Dubai">Dubai</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Newyork">Newyork</option>
+                                    <option value="London">London</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="South-Africa">South-Africa</option>
+
+                                </select>
+                                <span id="fromLocationError" class="error"></span>
+                            </div>
+                        </div>
+
+
+                        <label for="" class="date">Departure Date</label><br>
+                        <input type="date" name="" id="departureDate" placeholder="enter date">
+                        <span id="departureDateError" class="error"></span>
+                    </div>
+
+
+                    <div class="arrival">
+                        <div class="input-field">
+                            <label>TO:</label>
+                            <div class="custom-select">
+                                <select class="select" id="toLocation">
+                                    <option value="" class="">select your location</option>
+                                    <option value="Abuja">Abuja</option>
+                                    <option value="Lagos">Lagos</option>
+                                    <option value="Dubai">Dubai</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Newyork">Newyork</option>
+                                    <option value="London">London</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="South-Africa">South-Africa</option>
+
+                                </select>
+                                <span id="toLocationError" class="error"></span>
+                            </div>
+                        </div>
+
+
+                        <label for="" class="date">Return Date</label><br>
+                        <input type="date" name="" id="arrivalDate" placeholder="enter date">
+                        <span id="arrivalDateError" class="error"></span>
+                    </div>
+
+                </div>
+
+                <div class="flight-type">
+                    <div class="radio-container" id="flightType">
+
+                        <div class="radio">
+                            <input type="radio" name="flight-type" value="ROUND" id="roundTrip"
+                                style="margin-right: 10px;">
+
+                            ROUND
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" name="flight-type" value="ONEWAY" id="oneWayTrip"
+                                style="margin-right: 10px; ">
+                            ONEWAY
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" name="flight-type" value="ONEWAY" id="multipleTrip"
+                                style="margin-right: 10px; ">
+                            MULTIPLE
+                        </div>
+                        <span id="flightTypeError" class="error"></span>
+                    </div>
+
+                    <input type="submit" value="Order Ticket Now" class="order-button">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <h3 class="headtext">MANAGE MY BOOKINGS</h3>
+
+    <div class="MCard">
+        <div class="card">
+            <header class="header">
+                GET MY TICKET
+            </header>
+
+            <div class="body1">
+                <p class="content"> Yet to get your ticket?
+                    This service allows you request for ticket on a paid booking.
+                </p>
+                <img src="./image/get-my-ticket.svg" alt="picture" class="card-image">
+
+            </div>
+
+            <div class="bookings-footer-container">
+                <footer class="bookings-footer">
+                    book with us let's make your journey a memorable one.
+
+                </footer>
+                <button class="select-button" onclick="alert('Ticket is successfully booked')">Select</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <header class="header">
+                CHANGE TICKET
+            </header>
+
+            <div class="body1">
+                <p class="content"> This service allow you to make changes
+                    on your ticket such as date change,
+                    route change and cabin change on your
+                    existing booking.
+                </p>
+                <img src="./image/change-ticket.svg" alt="picture" class="card-image">
+            </div>
+
+
+            <div class="bookings-footer-container">
+                <footer class="bookings-footer">
+                    book with us let's make your journey a memorable one.
+
+                </footer>
+                <button class="select-button" onclick="alert('Ticket changed sucessfully')">Select</button>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <header class="header">
+                REFUND
+            </header>
+
+            <div class="body1">
+                <p class="content"> This service allow you to request for a refund
+                    on a paid existing booking.
+                </p>
+                <img src="./image/refunds.svg" alt="refund-picture" class="card-image">
+            </div>
+
+
+            <div class="bookings-footer-container">
+                <footer class="bookings-footer">
+                    book with us let's make your journey a memorable one.
+
+                </footer>
+                <button class="select-button" onclick="alert('You have been refunded')">Select</button>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <div class="footer-logo-container">
+                    <h6>BUKIT TRAVELS AND TOURS </h6>
+                    <a href="./flight.html"><img src="./image/logo2.png" alt="logo"
+                            style="height:200px; width:200px; "></a>
+                    <p style="width:240px;">BUKIT Travels and Tours provides good services to people in exchange for
+                        their interest to
+                        fly with us</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>We bring to the Trouvaille of Nigeria a venue to book cheap flights when one makes a flight booking
+                    online. Our online flight booking domain caters to the needs of booking flights and traces down the
+                    cheapest flights in the market to international destinations. We have everything from cheap flight
+                    tickets to budget-friendly airplane tickets. Flight booking to destinations across the world had
+                    never been this easier.</p>
+                <br>
+                <p>
+                    So, make the most of your vacation with Bukit and experience the extraordinary with online flight
+                    booking now.
+                </p>
+            </div>
+
+
+            <div class="footer-section">
+                <h2>BUKIT TOURS AND FLIGHT</h2>
+                <p>To ask question or make enquries <a style="text-decoration: underline; color: wheat"
+                        href="mailto:info@bukit.org">CLICK HERE</a>To send mail.</p>
+
+
+
+                <form class="feedback-form" id="myForm" onsubmit="validateForm(event)">
+                    <input type="text" class="feedback_name" name="feedback_name" id="feedback_name"
+                        placeholder="Your name">
+                    <span id="nameError" class="error"></span>
+
+                    <input type="email" class="feedback_email" name="feedback_email" id="feedback_email"
+                        placeholder="Enter Your Email">
+                    <span id="feedbackEmailError" class="error"></span>
+
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                    <span id="messageError" class="error"></span>
+                    <input type="submit" class="feedback_submit" value="SEND FEEDBACK">
+                </form>
+
+
+            </div>
+        </div>
+        <p class="base">BUKITNOW TOURS AND FLIGHT....&copy;2024</p>
+        <div>
+            <a href="#top" class="back"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="./JS/book-ticket.js"></script>
+    <script src="./JS/footer-feedback.js"></script>
+
+</body>
+
+</html>
